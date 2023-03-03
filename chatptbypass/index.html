@@ -69,15 +69,6 @@ $(document).ready(function() {
 var chatgpt_api;
 var apiUrl = "https://api.openai.com/v1/completions";
 
- $('#question').on('paste', function(e) {
-    var pastedData = e.originalEvent.clipboardData.getData('text');
-    var maxLength = $(this).attr('maxlength');
-    if (pastedData.length > maxLength) {
-      e.preventDefault();
-      $(this).val(pastedData.substring(0, maxLength));
-    }
-  });
-  
 function askApiKey() {
   chatgpt_api = prompt("Please enter your OpenAI API key:");
   if (!chatgpt_api) {
@@ -96,6 +87,10 @@ if (document.cookie.indexOf("chatgpt_api") >= 0) {
 
 $('#answer-btn').click(function() {
   var question = $('#question').val();
+  if (question.length > 2048) {
+    question = question.substring(0, 2048);
+    $('#question').val(question);
+  }
   var body = {
     prompt: question,
     model: "text-davinci-003",
