@@ -9,15 +9,14 @@
 
 	<script>
 		var userAgent = navigator.userAgent;
-		var messageElement = document.getElementById("message");
 
-		if ((userAgent.includes("Android") && !(userAgent.includes("Mobile") || userAgent.includes("Tablet"))) || userAgent.includes("iPad") || userAgent.includes("iPhone")) {
-			messageElement.innerHTML = "Welcome mobile user in desktop mode!";
-		} else if (userAgent.includes("Windows") || userAgent.includes("Macintosh") || userAgent.includes("Linux")) {
-			messageElement.innerHTML = "Welcome desktop user!";
-		} else {
-			messageElement.innerHTML = "Welcome user!";
-		}
+if ((userAgent.includes("Android") && !(userAgent.includes("Mobile") || userAgent.includes("Tablet"))) || userAgent.includes("iPad") || userAgent.includes("iPhone")) {
+    // iOS or Android device in desktop mode
+} else if (userAgent.includes("Windows") || userAgent.includes("Macintosh") || userAgent.includes("Linux")) {
+    // Windows, macOS, or Linux device
+} else {
+    // Other devices
+}
 	</script>
 </body>
 </html>
