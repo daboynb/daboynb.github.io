@@ -8,16 +8,16 @@
 	<p id="message"></p>
 
 	<script>
-var userAgent = navigator.userAgent;
+		var userAgent = navigator.userAgent;
+		var messageElement = document.getElementById("message");
 
-if ((userAgent.includes("Android") && !(userAgent.includes("Mobile") || userAgent.includes("Tablet"))) || userAgent.includes("iPad") || userAgent.includes("iPhone")) {
-    // iOS or Android device in desktop mode
-} else if (userAgent.includes("Windows") || userAgent.includes("Macintosh")) {
-    // Windows or macOS device in desktop mode
-} else {
-    // Device is not in desktop mode
-}
-
+		if ((userAgent.includes("Android") && !(userAgent.includes("Mobile") || userAgent.includes("Tablet"))) || userAgent.includes("iPad") || userAgent.includes("iPhone")) {
+			messageElement.innerHTML = "Welcome mobile user in desktop mode!";
+		} else if (userAgent.includes("Windows") || userAgent.includes("Macintosh") || userAgent.includes("Linux")) {
+			messageElement.innerHTML = "Welcome desktop user!";
+		} else {
+			messageElement.innerHTML = "Welcome user!";
+		}
 	</script>
 </body>
 </html>
