@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Agent Detection Example</title>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+	<p id="message"></p>
+
+	<script>
+		var userAgent = navigator.userAgent;
+		var messageElement = document.getElementById("message");
+
+		if (userAgent.includes("Android")) {
+			messageElement.innerHTML = "Welcome Android user!";
+		} else if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
+			messageElement.innerHTML = "Welcome iOS user!";
+		} else {
+			messageElement.innerHTML = "Welcome desktop user!";
+		}
+	</script>
+</body>
+</html>
