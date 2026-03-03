@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daboynb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="noise"></div>
+
+    <header class="header">
+        <div class="header-left">
+            <h1 id="site-title">daboynb</h1>
+            <span class="tagline" id="tagline">caffeine-powered dev &mdash; breaking things until they work</span>
+        </div>
+        <nav class="header-links">
+            <a href="https://github.com/daboynb" class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+            </a>
+            <a href="https://t.me/takidol" class="btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                Telegram
+            </a>
+            <a href="https://www.buymeacoffee.com/daboynb" class="btn-ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                Donate
+            </a>
+            <div class="private-tab-wrapper">
+                <button class="btn-private" id="private-tab">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Private Repos
+                </button>
+                <div class="private-dropdown" id="private-dropdown">
+                    <div class="eyes-container">
+                        <div class="eye">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eye">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <p class="private-text">nice try... they're private</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <span class="section-label">Projects</span>
+            <h2 class="section-title">What I've been working on.</h2>
+            <p class="section-desc">Open-source tools for Android, Linux, security and automation.</p>
+
+            <div class="projects-grid">
+                <!-- Android -->
+                <div class="category-card cat-android">
+                    <div class="category-header">
+                        <div class="category-icon">&#x1F4F1;</div>
+                        <span class="category-name">Android</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="https://github.com/daboynb/magisk_for_linux" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>magisk_for_linux</span>
+                                <span class="proj-sub">Patch Android images with Magisk from PC</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/Root_firestick" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>Root_firestick</span>
+                                <span class="proj-sub">Root for Firestick (FireOS &lt; 7.2.7.3)</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/AssistantDismiss" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>AssistantDismiss</span>
+                                <span class="proj-sub">Dismiss Assistant on YT Music ReVanced</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/remove_boot_warnings_a127f" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>remove_boot_warnings</span>
+                                <span class="proj-sub">Magisk module to remove unlock warning</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/Tricky_auto" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>Tricky_auto</span>
+                                <span class="proj-sub">Tasker app: add new installs to target.txt</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/Android-Builder" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>Android-Builder</span>
+                                <span class="proj-sub">Auto-build Android kernel via GH Actions</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/bootloop_saver" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>bootloop_saver</span>
+                                <span class="proj-sub">Auto-disable modules on bootloop</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/GmsCore" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>GmsCore</span>
+                                <span class="proj-sub">Free Play Services implementation</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Play Integrity -->
+                <div class="category-card cat-integrity">
+                    <div class="category-header">
+                        <div class="category-icon">&#x1F6E1;</div>
+                        <span class="category-name">Play Integrity</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="https://github.com/daboynb/PlayIntegrityNEXT" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>PlayIntegrityNEXT</span>
+                                <span class="proj-sub">Archived, replaced by playcurlNEXT</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/PIFS" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>PIFS</span>
+                                <span class="proj-sub">Collection of build props for PIF module</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/build.prop" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>build.prop</span>
+                                <span class="proj-sub">Create fingerprints of Pixel devices</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/KeyboxChecker" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>KeyboxChecker</span>
+                                <span class="proj-sub">Keybox validity check</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="category-card cat-security">
+                    <div class="category-header">
+                        <div class="category-icon">&#x1F512;</div>
+                        <span class="category-name">Security</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="https://github.com/daboynb/go_cops" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>go_cops</span>
+                                <span class="proj-sub">USB unplug = instant PC shutdown</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/detect_evil_maid" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>detect_evil_maid</span>
+                                <span class="proj-sub">Detect evil maid attacks</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/linux_bluetooth_unlock" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>linux_bluetooth_unlock</span>
+                                <span class="proj-sub">BT disconnect = screen lock</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Scripts -->
+                <div class="category-card cat-linux">
+                    <div class="category-header">
+                        <div class="category-icon">&#x1F427;</div>
+                        <span class="category-name">Scripts</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="https://github.com/daboynb/flash_windows_isos_on_linux" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>flash_windows_isos</span>
+                                <span class="proj-sub">Create bootable Windows USB on Linux</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/linux_scripts" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>linux_scripts</span>
+                                <span class="proj-sub">Scripts for Debian-based distros</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/windows_scripts" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>windows_scripts</span>
+                                <span class="proj-sub">Scripts for Windows</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/autojson" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>autojson</span>
+                                <span class="proj-sub">Generate Pixel Beta pif.json for PIF</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Automation -->
+                <div class="category-card cat-automation">
+                    <div class="category-header">
+                        <div class="category-icon">&#x2699;&#xFE0F;</div>
+                        <span class="category-name">Automation</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="https://github.com/daboynb/ngrok_telegram_Bot" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>ngrok_telegram_Bot</span>
+                                <span class="proj-sub">Send ngrok address via Telegram on boot</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/Gphoto_sync" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>Gphoto_sync</span>
+                                <span class="proj-sub">Google Photos &amp; Albums backup</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/ChatGPT-Bypass-gui" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>ChatGPT-Bypass-gui</span>
+                                <span class="proj-sub">Bypass ChatGPT filters via DaVinci API</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/playcurlNEXT" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>playcurlNEXT</span>
+                                <span class="proj-sub">Auto-update Play Integrity fingerprint</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Apps & APKs -->
+                <div class="category-card cat-apps">
+                    <div class="category-header">
+                        <div class="category-icon">&#x1F4E6;</div>
+                        <span class="category-name">Apps &amp; APKs</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="https://github.com/daboynb/vanced_apk_standalone" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>vanced_apk_standalone</span>
+                                <span class="proj-sub">Standalone Vanced APKs (post-discontinuation)</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/apk-placeholder" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>apk-placeholder</span>
+                                <span class="proj-sub">Build empty stub APKs as placeholders</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                        <a href="https://github.com/daboynb/Safetycore-placeholder" class="proj-link">
+                            <div class="proj-link-inner">
+                                <span>Safetycore-placeholder</span>
+                                <span class="proj-sub">Block Google SafetyCore via fake APK</span>
+                            </div>
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="https://github.com/daboynb?tab=repositories" class="view-all">
+                View all repositories <span>&rarr;</span>
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <span id="footer-text">&copy; 2026 daboynb</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
