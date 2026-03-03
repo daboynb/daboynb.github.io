@@ -128,4 +128,30 @@
             }
         });
     }
+    // ── 5. Fetch total GitHub stars ──
+    var starBadge = document.getElementById('star-count');
+
+    console.log('starBadge element:', starBadge);
+    if (starBadge) {
+        fetch('https://api.github.com/users/daboynb/repos?per_page=100')
+            .then(function (r) { console.log('API response status:', r.status); return r.json(); })
+            .then(function (repos) {
+                console.log('Repos received:', Array.isArray(repos), repos.length);
+                if (!Array.isArray(repos)) {
+                    console.error('GitHub API error:', repos);
+                    return;
+                }
+                var total = 0;
+                repos.forEach(function (repo) {
+                    total += repo.stargazers_count || 0;
+                });
+                console.log('Total stars:', total);
+                if (total > 0) {
+                    starBadge.textContent = '\u2605 ' + total.toLocaleString();
+                    starBadge.classList.add('visible');
+                    console.log('Badge updated');
+                }
+            })
+            .catch(function (err) { console.error('Star fetch failed:', err); });
+    }
 })();
